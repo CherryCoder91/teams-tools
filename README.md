@@ -1,5 +1,3 @@
-# Teams Tools 🛠
-
 <p align="center">
   <img src="./TeamsTools/Resources/Icons/teams-tools-512.png" alt="Sublime's custom image" width="100px" height="100px"/>
 </p>
@@ -27,3 +25,12 @@ Use Teams tools to take back control of your teams availability status with 'Tea
 The UI of Teams Tools is small, clean and unobtrusive.
 
 ![Teams Tools | Teams Alive](./Documents/Images/TeamsToolsUIExample.png)
+
+## Installation
+
+Installation steps:
+
+1. Download the [latest release](https://github.com/CherryCoder91/teams-tools/releases)
+2. Copy to program files and run TeamsTools.exe. 
+3. Pin Teams Tools to the task bar once running.
+4. Profit.
