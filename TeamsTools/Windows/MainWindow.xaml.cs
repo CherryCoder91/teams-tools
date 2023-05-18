@@ -3,18 +3,20 @@ using System.Windows.Input;
 using System.Windows.Media;
 using TeamsTools.Services;
 
-namespace TeamsTools
+namespace TeamsTools.Windows
 {
     public partial class MainWindow : Window
     {
 
         internal ITeamsKeepAliveService TeamsKeepAliveService { get; }
+        public TeamsViewportWindow TeamsViewportWindow { get; }
 
-        public MainWindow(ITeamsKeepAliveService teamsKeepAliveService)
+        public MainWindow(ITeamsKeepAliveService teamsKeepAliveService, TeamsViewportWindow teamsViewportWindow)
         {
             DataContext = this;
             InitializeComponent();
             TeamsKeepAliveService = teamsKeepAliveService;
+            TeamsViewportWindow = teamsViewportWindow;
             TeamsKeepAliveService.ActiveStateChanged += HandleTeamsAliveActiveStateChanged;
         }
 
@@ -33,7 +35,7 @@ namespace TeamsTools
 
         private void ShowTeamsViewportButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO
+            TeamsViewportWindow.Show();
         }
 
         private void ToggleTeamsKeepAliveButton_Click(object sender, RoutedEventArgs e)

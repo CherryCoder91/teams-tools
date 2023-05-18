@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
+using TeamsTools.Windows;
 
 namespace TeamsTools
 {
@@ -15,6 +16,7 @@ namespace TeamsTools
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<MainWindow>();
+                    services.AddSingleton<TeamsViewportWindow>();
                     services.AddSingleton<ITeamsKeepAliveService, TeamsKeepAliveService>();
                     services.AddSingleton<IInputSenderService, InputSenderService>();
                 })

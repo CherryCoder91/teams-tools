@@ -1,0 +1,50 @@
+﻿<Window x:Class="TeamsTools.Windows.TeamsViewportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeamsTools.Windows"
+        xmlns:fa="http://schemas.fontawesome.com/icons/svg"
+        mc:Ignorable="d"
+        Title="Teams Viewport" Height="450" Width="800"
+        Topmost="true"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        Background="Transparent"
+        ResizeMode="CanResizeWithGrip">
+
+    <Window.Resources>
+        <Style x:Key="BorderHoverStyle"  TargetType="{x:Type Border}">
+            <Style.Triggers>
+                <Trigger Property="Border.IsMouseOver" Value="True">
+                    <Setter Property="Border.Opacity" Value="1"/>
+                </Trigger>
+                <Trigger Property="Border.IsMouseOver" Value="False">
+                    <Setter Property="Border.Opacity" Value="0.3"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="Transparent" BorderBrush="#7160e8" BorderThickness="1px">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" >
+            <StackPanel Orientation="Horizontal">
+                <Border Width="30px" Height="30px" CornerRadius="10,10,10,10" Cursor="SizeAll"  Style="{ StaticResource BorderHoverStyle }">
+                    <fa:SvgAwesome Icon="Solid_ArrowsUpDownLeftRight" PrimaryColor="#7160e8" Width="600" Margin="5"/>
+                </Border>
+
+                <Button Click="Close_Window">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="30px" Height="30px" CornerRadius="10,10,10,10" Cursor="Hand" Style="{ StaticResource BorderHoverStyle }">
+                                <fa:SvgAwesome Icon="Solid_CircleXmark" PrimaryColor="#7160e8" Width="600" Margin="0,5,5,5"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+
+</Window>

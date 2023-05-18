@@ -1,28 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Resources\Fonts\GolosText-VariableFont_wght.ttf" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Resources\Fonts\GolosText-VariableFont_wght.ttf" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FontAwesome6.Svg" Version="2.5.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.4.23259.5" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.4.23259.5" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FontAwesome6.Svg" Version="2.5.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.4.23259.5" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0-preview.4.23259.5" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\TeamsTools.CustomControls\TeamsTools.CustomControls.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\TeamsTools.CustomControls\TeamsTools.CustomControls.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Resources\Fonts\GolosText-VariableFont_wght.ttf" />
-  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="Resources\Fonts\GolosText-VariableFont_wght.ttf" />
+	</ItemGroup>
 
 </Project>
