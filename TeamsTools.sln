@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamsTools", "TeamsTools\TeamsTools.csproj", "{EEE26CDA-161D-4972-AAAB-42852BA310B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeamsTools", "TeamsTools\TeamsTools.csproj", "{EEE26CDA-161D-4972-AAAB-42852BA310B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamsTools.CustomControls", "TeamsTools.CustomControls\TeamsTools.CustomControls.csproj", "{3923D5D8-F321-4DCE-84AB-324AA49CC687}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EEE26CDA-161D-4972-AAAB-42852BA310B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEE26CDA-161D-4972-AAAB-42852BA310B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEE26CDA-161D-4972-AAAB-42852BA310B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3923D5D8-F321-4DCE-84AB-324AA49CC687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3923D5D8-F321-4DCE-84AB-324AA49CC687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3923D5D8-F321-4DCE-84AB-324AA49CC687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3923D5D8-F321-4DCE-84AB-324AA49CC687}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

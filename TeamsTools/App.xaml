@@ -3,6 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:TeamsTools">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/TeamsTools.CustomControls;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--<FontFamily x:Key="QuickSandLight">pack://application:,,,/Resources/Fonts/#Quicksand Light</FontFamily>
+            <FontFamily x:Key="QuickSandRegular">pack://application:,,,/Resources/Fonts/#Quicksand Regular</FontFamily>
+            <FontFamily x:Key="QuickSandBold">pack://application:,,,/Resources/Fonts/#Quicksand Bold</FontFamily>
+            <FontFamily x:Key="Golos">pack://application:,,,/Resources/Fonts/#Golos Text</FontFamily>-->
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
