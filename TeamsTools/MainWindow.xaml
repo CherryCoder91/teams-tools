@@ -4,9 +4,40 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeamsTools"
+        xmlns:fa="http://schemas.fontawesome.com/icons/svg"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Teams Tools" Height="95" Width="360"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-    </Grid>
+    <Border Background="#2f2f4a" Grid.Column="2" CornerRadius="15,15,15,15">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Button FontFamily="{StaticResource Golos}" Margin="10" Style="{StaticResource TertiaryButton}"  x:Name="ToggleTeamsKeepAliveButton" Click="ToggleTeamsKeepAliveButton_Click">
+                <StackPanel Orientation="Vertical">
+                    <fa:SvgAwesome Icon="Solid_Headset" PrimaryColor="{Binding Foreground, ElementName=ToggleTeamsKeepAliveButton}" Width="28" Margin="0,0,0,8"/>
+                    <TextBlock>Teams Alive</TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button FontFamily="{StaticResource Golos}" Margin="10" Style="{StaticResource TertiaryButton}" x:Name="ShowTeamsViewportButton" Click="ShowTeamsViewportButton_Click">
+                <StackPanel Orientation="Vertical">
+                    <fa:SvgAwesome Icon="Solid_Desktop" PrimaryColor="{Binding Foreground, ElementName=ShowTeamsViewportButton}" Width="28" Margin="0,0,0,10"/>
+                    <TextBlock>Teams Viewport</TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button FontFamily="{StaticResource Golos}" Margin="10" Style="{StaticResource TertiaryButton}" x:Name="ExitButton" Click="Exit_Click">
+                <StackPanel Orientation="Vertical">
+                    <fa:SvgAwesome Icon="Solid_CircleXmark" PrimaryColor="{Binding Foreground, ElementName=ExitButton}" Width="28" Margin="0,0,0,7"/>
+                    <TextBlock>Exit</TextBlock>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+    </Border>
 </Window>
