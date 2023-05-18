@@ -6,10 +6,13 @@
 		<Nullable>enable</Nullable>
 		<UseWPF>true</UseWPF>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<ApplicationIcon>Resources\Icons\teams-tools-512.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Remove="Resources\Fonts\GolosText-VariableFont_wght.ttf" />
+		<None Remove="Resources\Icons\teams-tools-512.ico" />
+		<None Remove="Resources\Icons\teams-tools-512.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -24,6 +27,12 @@
 
 	<ItemGroup>
 		<Resource Include="Resources\Fonts\GolosText-VariableFont_wght.ttf" />
+		<Resource Include="Resources\Icons\teams-tools-512.ico">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Resources\Icons\teams-tools-512.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
 	</ItemGroup>
 
 </Project>
