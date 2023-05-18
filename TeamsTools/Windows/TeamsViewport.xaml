@@ -12,7 +12,8 @@
         WindowStyle="None"
         MouseDown="Window_MouseDown"
         Background="Transparent"
-        ResizeMode="CanResizeWithGrip">
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <Style x:Key="BorderHoverStyle"  TargetType="{x:Type Border}">

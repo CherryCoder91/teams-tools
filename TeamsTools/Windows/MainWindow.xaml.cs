@@ -18,6 +18,7 @@ namespace TeamsTools.Windows
             TeamsKeepAliveService = teamsKeepAliveService;
             TeamsViewportWindow = teamsViewportWindow;
             TeamsKeepAliveService.ActiveStateChanged += HandleTeamsAliveActiveStateChanged;
+            this.Loaded += new RoutedEventHandler(Window_Loaded);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -45,6 +46,13 @@ namespace TeamsTools.Windows
         private void HandleTeamsAliveActiveStateChanged(object? sender, bool e)
         {
             ToggleTeamsKeepAliveButton.Foreground = e ? new SolidColorBrush((Color)ColorConverter.ConvertFromString("#7f85f4")) : new SolidColorBrush(Colors.White);
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var desktopWorkingArea = SystemParameters.WorkArea;
+            Left = desktopWorkingArea.Right - Width - 15;
+            Top = desktopWorkingArea.Bottom - Height - 15;
         }
     }
 }
