@@ -4,7 +4,7 @@
     xmlns:local="clr-namespace:TeamsTools.CustomControls">
 
     <ResourceDictionary.MergedDictionaries>
-
+        <ResourceDictionary Source="/TeamsTools.CustomControls;component/Themes/Button.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>
