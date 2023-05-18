@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace LoadoutDrop.Services
+namespace TeamsTools.Services
 {
     [Flags]
     public enum MouseEventF

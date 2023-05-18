@@ -1,4 +1,4 @@
-﻿namespace LoadoutDrop.Services
+﻿namespace TeamsTools.Services
 {
     /// <summary>
     /// A Service that can send Input commands to the OS.

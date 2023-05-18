@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Threading;
 
-namespace LoadoutDrop.Services
+namespace TeamsTools.Services
 {
     /// <inheritdoc cref="ITeamsKeepAliveService"/>
     internal class TeamsKeepAliveService : ITeamsKeepAliveService

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LoadoutDrop.Services
+namespace TeamsTools.Services
 {
     /// <summary>
     /// A Service that can prevent the MS Teams application from going inactive while the user is away from their PC.
