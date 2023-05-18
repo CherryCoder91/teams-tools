@@ -1,13 +1,21 @@
-﻿using System.Windows;
+﻿using LoadoutDrop.Services;
+using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace TeamsTools
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+
+        internal ITeamsKeepAliveService TeamsKeepAliveService { get; }
+
+        public MainWindow(ITeamsKeepAliveService teamsKeepAliveService)
         {
+            DataContext = this;
             InitializeComponent();
+            TeamsKeepAliveService = teamsKeepAliveService;
+            TeamsKeepAliveService.ActiveStateChanged += HandleTeamsAliveActiveStateChanged;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -30,7 +38,11 @@ namespace TeamsTools
 
         private void ToggleTeamsKeepAliveButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO
+            TeamsKeepAliveService.ToggleTeamsAlive();
+        }
+        private void HandleTeamsAliveActiveStateChanged(object? sender, bool e)
+        {
+            ToggleTeamsKeepAliveButton.Foreground = e ? new SolidColorBrush((Color)ColorConverter.ConvertFromString("#7f85f4")) : new SolidColorBrush(Colors.White);
         }
     }
 }

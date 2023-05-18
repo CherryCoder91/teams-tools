@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using LoadoutDrop.Services;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
 
@@ -14,6 +15,8 @@ namespace TeamsTools
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<MainWindow>();
+                    services.AddSingleton<ITeamsKeepAliveService, TeamsKeepAliveService>();
+                    services.AddSingleton<IInputSenderService, InputSenderService>();
                 })
                 .Build();
         }
