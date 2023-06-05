@@ -23,7 +23,7 @@
                     <Setter Property="Border.Opacity" Value="1"/>
                 </Trigger>
                 <Trigger Property="Border.IsMouseOver" Value="False">
-                    <Setter Property="Border.Opacity" Value="0.3"/>
+                    <Setter Property="Border.Opacity" Value="0.1"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
