@@ -16,7 +16,7 @@ namespace TeamsTools
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<MainWindow>();
-                    services.AddSingleton<TeamsViewportWindow>();
+                    services.AddTransient<TeamsViewportWindow>();
                     services.AddSingleton<ITeamsKeepAliveService, TeamsKeepAliveService>();
                     services.AddSingleton<IInputSenderService, InputSenderService>();
                 })
