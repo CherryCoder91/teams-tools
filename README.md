@@ -29,7 +29,7 @@ The UI of Teams Tools is small, clean and unobtrusive.
 
 Installation steps:
 
-1. Download the [latest release](https://github.com/CherryCoder91/teams-tools/releases)
+1. Download the [latest release](https://github.com/CherryCoder91/teams-tools/releases/tag/v1.0.1)
 2. Copy to program files and run TeamsTools.exe. 
 3. Pin Teams Tools to the task bar once running.
 4. Profit.
